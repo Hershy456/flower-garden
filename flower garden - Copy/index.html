@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flower Garden</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- anime.js for smooth animations and main script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Background Glow -->
+  <div class="bg-glow"></div>
+
+  <!-- Left Text -->
+  <div class="hero-text">
+    <h3>🌸 Flower Garden for You</h3>
+
+    <p>Click Anywhere to</p>
+
+    <h1>Plant Flowers</h1>
+
+    <span>✨ or turn on Auto Bloom</span>
+  </div>
+
+  <!-- Flowers -->
+  <div class="garden" id="garden">
+
+
+    <img src="flowers/rose.png" class="flower hidden flower1">
+    <img src="flowers/lily.png" class="flower hidden flower2">
+    <img src="flowers/peony.png" class="flower hidden flower3">
+    <img src="flowers/delphinium.png" class="flower hidden flower4">
+    <img src="flowers/ranunculus.png" class="flower hidden flower5">
+    <img src="flowers/cornflower.png" class="flower hidden flower6">
+    <img src="flowers/poppy.png" class="flower hidden flower7">
+    <img src="flowers/purpleflower.png" class="flower hidden flower8">
+    <img src="flowers/forgetme.png" class="flower hidden flower9">
+
+  </div>
+
+  <!-- Bottom Controls -->
+  <div class="controls">
+    <button id="clearBtn" class="btn primary">🧹 Clear Garden</button>
+    <button id="autoBtn" class="btn">✨ Auto Bloom</button>
+    <button id="musicBtn" class="btn">🔈 Muted</button>
+  </div>
+
+  
+  <div class="footer">
+    Made with aktu efforts | Tap to grow flowers
+  </div>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Embed Modal -->
+  <div id="embedModal" class="embed-modal hidden">
+    <div class="embed-inner">
+      <button id="closeEmbed" class="btn">✕ Close</button>
+      <div class="embed-controls">
+        <button id="playlistPrev" class="btn">◀ Prev</button>
+        <div id="playlistLabel" class="playlist-label"></div>
+        <button id="playlistNext" class="btn">Next ▶</button>
+      </div>
+      <div id="embedContainer" class="embed-container"></div>
+    </div>
+  </div>
+
+  <!-- Dock for laptop/desktop embeds -->
+  <div id="embedDock" class="embed-dock hidden">
+    <div class="embed-dock-inner">
+      <button id="closeDock" class="btn">✕</button>
+      <div class="embed-controls">
+        <button id="playlistPrevDock" class="btn">◀</button>
+        <div id="playlistLabelDock" class="playlist-label"></div>
+        <button id="playlistNextDock" class="btn">▶</button>
+      </div>
+      <div id="dockContainer" class="embed-container"></div>
+    </div>
+  </div>
+
+
+</body>
+</html>
